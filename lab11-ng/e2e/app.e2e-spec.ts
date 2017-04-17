@@ -1,10 +1,10 @@
-import { MwaLab10Page } from './app.po';
+import { Lab11NgPage } from './app.po';
 
-describe('mwa-lab10 App', () => {
-  let page: MwaLab10Page;
+describe('lab11-ng App', () => {
+  let page: Lab11NgPage;
 
   beforeEach(() => {
-    page = new MwaLab10Page();
+    page = new Lab11NgPage();
   });
 
   it('should display message saying app works', () => {

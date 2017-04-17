@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class MwaLab10Page {
+export class Lab11NgPage {
   navigateTo() {
     return browser.get('/');
   }
