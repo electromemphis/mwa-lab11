@@ -4,26 +4,29 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-counter',
   template: `
       <input type='button' value='+' (click)='increaseCounter()'>
-      {{counterValue}}
+      {{counter}}
       <input type='button' value='-' (click)='decreaseCounter()'>
       <ng-content></ng-content>
     `
 })
 export class CounterComponent{
-  @Input() counter;
-  counterValue = 0;
+  @Input()
+  counter: number;
+  counterValue: number;
+
   @Output() counterChange = new EventEmitter();
 
   increaseCounter(){
-    this.counterValue++;
+    this.counter++;
+    this.counterValue = this.counter;
+    this.counterChange.emit(this.counterValue);
   }
 
   decreaseCounter(){
-    this.counterValue--;
+    this.counter--;
+    this.counterValue = this.counter;
+    this.counterChange.emit(this.counterValue);
   }
 
-  setCounterChange(){
-    
-  }
 
 }
